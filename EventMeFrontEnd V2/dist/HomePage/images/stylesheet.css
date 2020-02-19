@@ -1,0 +1,124 @@
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%; 
+  font-family: Verdana
+}
+
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover { 
+
+  background-color: #111;
+
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+ /* color: white;
+ background-color: #292923; */
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  border-radius: 10px;
+  background-color: #CDCDCD;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+

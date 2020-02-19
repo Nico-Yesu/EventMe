@@ -1,0 +1,100 @@
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  z-index: 9999;
+  width: 100%; 
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+html, body{margin:0px; padding:0px;}
+
+
+
+
+
+body{
+  font-family: Verdana;
+}
+
+
+
+
+/*shows the stars side by side, centered, and in reverse order than the HMTL*/
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+/*hides the radio buttons*/
+.rating > input{ display:none;}
+
+/*style the empty stars, sets position:relative as base for pseudo-elements*/
+.rating > label {
+  position: relative;
+  width: 1.1em;
+  font-size: 6vw;
+  color: #FFD700;
+  cursor: pointer;
+}
+
+/* sets filled star pseudo-elements */
+.rating > label::before{ 
+  content: "\2605";
+  position: absolute;
+  opacity: 0;
+}
+/*overlays a filled start character to the hovered element and all previous siblings*/
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+  opacity: 1 !important;
+}
+
+/*overlays a filled start character on the selected element and all previous siblings*/
+.rating > input:checked ~ label:before{
+  opacity:1;
+}
+
+/*when an element is selected and pointer re-enters the rating container, selected rate and siblings get semi transparent, as reminder of current selection*/
+.rating:hover > input:checked ~ label:before{ opacity: 0.4; }
+
+/*just aesthetics*/
+
+/*body{ background: #222225; color: white;}*/
+
+h1, p{ text-align: center;}
+p{ font-size: 1.2rem;}
+@media only screen and (max-width: 600px) {
+  h1{font-size: 14px;}
+  p{font-size: 12px;}
+}
+
